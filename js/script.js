@@ -7,5 +7,14 @@ function printMessage(msg) {
 function clearMessages() {
     document.getElementById('messages').innerHTML = '';
 }
-let computerMove = "kamień";
-let playerMove = "papier";
+let computerMove = "";
+let playerMove = "";
+
+let randomNumber = Math.floor(Math.random() * 3);
+if (randomNumber == 0) {
+    computerMove = "kamień";
+} else if (randomNumber == 1) {
+    computerMove = "papier";
+} else {
+    computerMove = "nożyczki";
+}
