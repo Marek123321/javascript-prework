@@ -18,3 +18,21 @@ if (randomNumber == 0) {
 } else {
     computerMove = "nożyczki";
 }
+
+let playerInput = prompt('wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+if (playerInput == "1") {
+    playerMove = "kamień";
+} else if (playerInput == "2") {
+    playerMove = "papier";
+} else if (playerInput == "3") {
+    playerMove = "nożyczki";
+}
+
+if (computerMove == playerMove) {
+    printMessage("draw");
+} else if (computerMove == "kamień" && playerMove == "papier" || computerMove == "papier" && playerMove == "nożyczki" || computerMove == "nożyczki" && playerMove == "kamień") {
+    printMessage("win");
+} else {
+    printMessage("loss");
+}
+console.log(computerMove);
