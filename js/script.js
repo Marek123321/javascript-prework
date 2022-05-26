@@ -52,9 +52,14 @@ function playGame(playerInput) {
 
     getMoveName(playerInput);
     displayResult(getMoveName(randomNumber), getMoveName(playerInput));
-    console.log("ok");
 }
 
-document.getElementById('rock').addEventListener('click', playGame);
-document.getElementById('paper').addEventListener('click', playGame);
-document.getElementById('scissors').addEventListener('click', playGame);
+document.getElementById('rock').addEventListener('click', function () {
+    playGame(0);
+});
+document.getElementById('paper').addEventListener('click', function () {
+    playGame(1);
+});
+document.getElementById('scissors').addEventListener('click', function () {
+    playGame(2);
+});
